@@ -1,2 +1,2 @@
-# personal-site
+# Personal Site
 😺 My personal site and blog
