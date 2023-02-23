@@ -1,12 +1,10 @@
 ---
 title: Android apps that I use
-permalink: "/pages/favorite-android-apps.html"
+permalink: "/pages/favorite-android-apps/"
 order: 1
 ---
 
 {%- from "components/components.njk" import component -%}
-
-## {{title}}
 
 Sometimes I get people saying that they want to start their privacy journey, and there's always that question: "What apps do you use from a privacy standpoint?" or "What are some good open source apps that you use?" So that's why I created this page—to answer those questions.
 

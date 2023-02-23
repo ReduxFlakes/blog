@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+    
+        Improving Lineage OS | ReduxFlakes
+    
+</title>
+
+    <meta name="description" content="App developer. Privacy advocate">
+
+<link rel="stylesheet" href="/css/reset.css">
+<link rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+            <header class="header--main">
+    <span class="header--title">RF</span>
+    <nav>
+        <ul class="nav--list">
+            
+                <li>
+                    <a class="nav__list__link" href="/" >
+                        Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="nav__list__link" href="/blog/" >
+                        Blog
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="nav__list__link" href="/guides/" aria-current="page">
+                        Guides
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="nav__list__link" href="/projects/" >
+                        Projects
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="nav__list__link" href="/contributions/" >
+                        Contributions
+                    </a>
+                </li>
+            
+                <li>
+                    <a class="nav__list__link" href="/about/" >
+                        About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+</header>
+            <main>
+                
+<article class="post--meta">
+
+<h1>Improving Lineage OS</h1>
+
+
+<time>13 Feb, 2023</time>
+
+
+
+<span class="excerpt"> 
+My setup for making Lineage OS better for daily use
+</span>
+
+
+</article>
+
+        <div class="notice--box notice--box--info">
+<span>This guide is still in the works, but it&#39;s available to the public for people who are interested in it or who want to improve it.</span>
+</div>
+<p>So if you didn't know, I use Lineage OS on my main device simply because of how lightweight, smooth, and private it is. Obviously, it's not as private as GrapheneOS or Calyx OS, but yeah, if you don't have a Pixel phone, Lineage OS is your best bet.</p>
+<p>But we are talking about Android and not iOS, so we can do whatever we want, and that's where this guide enters. I will be showing all the steps I took to make Lineage OS more enjoyable and easier for daily use, so let's get messy!</p>
+<div class="notice--box notice--box--info">
+<span>All of these steps were made on Lineage OS 19 microG on the Xiaomi 11 Lite 5G NE.</span>
+</div>
+<h2 id="disable-adb">Disable ADB</h2>
+<p>By default, Lineage OS comes with ADB and ADB Root turned on by default, which can be helpful to easily connect your phone into your computer, but it's also risky since there can be exploits into ADB itself, and having both turned on just makes the process of accessing the device more easy.</p>
+<p>To turn off ADB, simply go to <code>Settings</code> and scroll down until <code>About phone</code>, click <strong>seven times</strong> on <code>Build number</code>, then go back and go to <code>About phone</code> again and find <code>Developer options</code>. Inside, find the section called <code>Debugging</code> and disable <code>USB debugging</code> and <code>Rooted debugging</code>.</p>
+<img src="https://cdn.statically.io/gh/ReduxFlakes/assets/main/personal-blog/guides/better-lineage/adb_dev_options.png" class="img__pos img__center ">
+<em class="img__label img__label__center"> Debugging in Developer options</em>
+<h2 id="connectivity-settings">Connectivity settings</h2>
+<p>For some reason, NFC and other network-related settings are enabled by default in Android; some of them simply drain the battery, while others can expose you to security risks. Disabling these settings is easy, so let's get started.</p>
+<img src="https://cdn.statically.io/gh/ReduxFlakes/assets/main/personal-blog/guides/better-lineage/connection_preferences.png" class="img__pos img__center ">
+<em class="img__label img__label__center"> Connection preferences in Connected devices</em>
+<h3 id="nfc">NFC</h3>
+<p>Go into <code>Settings</code>and <code>Connected devices</code>,  then go into <code>Connection preferences</code> and then <code>NFC</code>. Disable the option <code>Use NFC</code>.</p>
+<h3 id="printing">Printing</h3>
+<p>Android comes with a universal printing service so you can connect your printer easily, but for some reason, it is turned on by default.</p>
+<p>Go to <code>Connection preferences</code> from the NFC step and go to <code>Printing</code>. On the section <code>Print services</code> there's a list of all the printing services installed on your device, all devices come with the <strong>Default Print Service</strong>; click on it, and at the top, disable the <code>Use print service</code> option.</p>
+<h3 id="bluetooth">Bluetooth</h3>
+<p>Despite its age, Bluetooth can be very useful for sending files without internet to a nearby device, but it consumes a lot of battery power.</p>
+<p>To disable it, you can either go to QS Tiles and disable it or go into <code>Connection preferences</code> again, click on <code>Bluetooth</code> and disable <code>Use Bluetooth</code>.</p>
+<h2 id="network-and-internet">Network and Internet</h2>
+<p>Different from connectivity, which is related to connecting ecosystems, this section will touch on the internet side of things.</p>
+<img src="https://cdn.statically.io/gh/ReduxFlakes/assets/main/personal-blog/guides/better-lineage/network_internet.png" class="img__pos img__center ">
+<em class="img__label img__label__center"> Network and Internet</em>
+<h3 id="notify-for-public-networks">Notify for public networks</h3>
+<p>This is a feature of Android that notifies the user if a public network is available. Although it seems helpful, it drains battery since it needs to scan in the background for public Wi-Fi. Not only that, public networks are unsafe since anyone can join them and easily hack them.</p>
+<p>Learn more about the risks of public networks in this article, &quot;<a href="https://protonvpn.com/blog/public-wifi-safety/">Is Public WiFi safe to use?</a>&quot; by ProtonVPN.</p>
+<p>To disable, simply go to <code>Settings</code>, <code>Network and Internet</code> and then <code>Internet</code>. Scroll down until <code>Network Preferences</code> and disable <code>Notify for public networks</code>.</p>
+<h3 id="changing-dns">Changing DNS</h3>
+<p>This is one of the most important options in this guide. To put it simply, DNS is like a phone book for the internet. When you type a website url into your browser, DNS translates that url into an IP address, which is unique identifier for that website server. Know more about DNS on the <a href="https://www.privacyguides.org/advanced/dns-overview/">DNS Overview</a> page in Privacy Guides.</p>
+<p>Before changing this setting, you'll need to choose a <strong>DNS Resolver</strong>; fortunately, Privacy Guides have a handy page called <a href="https://www.privacyguides.org/dns/">DNS Resolvers</a> where you can choose the best resolver for your needs.</p>
+<p>To change the DNS, simply go into Network and Internet and click on <code>Private DNS</code>. Here you will change the default option (normally <code>Automatic</code>) to <code>Private DNS provider hostname</code> and then insert your DNS provider of choice.</p>
+<h2 id="location">Location</h2>
+<p>Coming soon!</p>
+
+
+            </main>
+            <footer>
+    <p>Tiago Carmo 2021-2023 | Most content is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>
+    </p>
+    <p>Built using 11ty and procrastination, hosted on GitHub and deployed to Neocities.
+    </footer>
+    </body>
+</html>

@@ -211,7 +211,7 @@ main p:last-child {
 }
 
 footer {
-  padding: 1rem 0;
+  padding: 1rem;
   border-top: 2px dashed var(--container-border);
   text-align: center;
 }
@@ -360,4 +360,31 @@ border: 3px dashed var(--text-color-strong);
   flex-direction: column;
   gap: 1rem;
   padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1.15em;
+  }
+  .nav--list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+  }
+  .home--grid {
+    grid-template-columns: 1fr;
+  }
+  .post--meta {
+    width: auto;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    aspect-ratio: 16/7;
+    object-fit: cover;
+  }
 }

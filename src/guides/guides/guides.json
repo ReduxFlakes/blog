@@ -1,6 +1,6 @@
 {
     "layout": "post.njk",
-    "permalink": "/guides/{{ title | slugify }}.html",
+    "permalink": "/guides/{{ title | slugify }}/",
     "tags": ["guides"]
 }
   
