@@ -1,6 +1,6 @@
 ---
 title: Android apps that I use
-permalink: "/pages/favorite-android-apps"
+permalink: "/pages/favorite-android-apps.html"
 order: 1
 ---
 

@@ -1,5 +1,0 @@
-
-Sitemap: https://reduxflakes.neocities.org//sitemap.xml
-
-User-agent: *
-Disallow:
