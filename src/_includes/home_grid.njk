@@ -1,0 +1,26 @@
+<div class="home--grid">
+    <article>
+        <h2>
+            Pages
+        </h2>
+        <ul role="list">
+            {%- for pages in collections.orderedPages -%}
+                <li>
+                    <a href="{{pages.url}}">{{ pages.data.title }}</a>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </article>
+    <article>
+        <h2>
+            Recent Posts
+        </h2>
+        <ul role="list">
+            {%- for posts in collections.posts -%}
+                <li>
+                    <a href="{{posts.url}}">{{ posts.data.title }}</a>
+                </li>
+            {%- endfor -%}
+        </ul>
+    </article>
+</div>

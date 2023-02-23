@@ -1,0 +1,14 @@
+<header class="header--main">
+    <span class="header--title">RF</span>
+    <nav>
+        <ul class="nav--list">
+            {% for mainNav in navigation.mainNav %}
+                <li>
+                    <a class="nav__list__link" href="{{ mainNav.url }}" {% if (mainNav.url != "/" and page.url.startsWith(mainNav.url)) or page.url == mainNav.url %}aria-current="page"{% endif %}>
+                        {{ mainNav.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

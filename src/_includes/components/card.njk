@@ -1,0 +1,8 @@
+<a class="card card--link" href="{{params.url}}">
+<img src="{{ params.cover }}" alt="{{ params.title | slugify }}"/>
+<article class="card--content">
+<h2>{{ params.title }}</h2>
+<time style="font-size: 0.85em;">{{params.date}}</time>
+<p>{{ params.content }}</p>
+</article>
+</a>

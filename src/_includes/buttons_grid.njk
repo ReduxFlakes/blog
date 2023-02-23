@@ -1,0 +1,7 @@
+<div class="flex--wrap">
+    {%- for siteButtons in buttons.siteButtons -%}
+        <a href="{{ siteButtons.url }}" target="_blank">
+            <img src="https://cdn.statically.io/gh/ReduxFlakes/assets/main/personal-blog/buttons/{{siteButtons.img}}" alt="{{siteButtons.alt}}}">
+        </a>
+    {%- endfor -%}
+</div>

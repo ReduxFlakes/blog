@@ -1,0 +1,24 @@
+{
+  "siteButtons": [
+    {
+      "img": "dig_deeper.png",
+      "url": "https://digdeeper.neocities.org/",
+      "alt": "Dig Deeper"
+    },
+    {
+      "img": "openbooks.gif",
+      "url": "https://openbooks.neocities.org/",
+      "alt": "OpenBooks"
+    },
+    {
+      "img": "sadgrlonline.gif",
+      "url": "https://sadgrl.online",
+      "alt": "sadgrl.online"
+    },
+    {
+      "img": "districts.png",
+      "url": "https://districts.neocities.org/",
+      "alt": "Districts"
+    }
+  ]
+}

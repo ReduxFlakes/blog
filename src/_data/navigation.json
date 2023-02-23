@@ -1,0 +1,28 @@
+{
+  "mainNav": [
+    {
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "title": "Guides",
+      "url": "/guides/"
+    },
+    {
+      "title": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "title": "Contributions",
+      "url": "/contributions/"
+    },
+    {
+      "title": "About",
+      "url": "/about/"
+    }
+  ]
+}
